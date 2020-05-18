@@ -3,7 +3,7 @@ require('minitest/reporters')
 require_relative('../a.rb')
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
-class TestBankAccount < Minitest::Test
+class TestCodeclanStudent < Minitest::Test
     
 
     def test_get_student_name
