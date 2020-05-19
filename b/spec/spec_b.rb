@@ -50,15 +50,15 @@ class TestSportTeam < Minitest::Test
  end
 
  def test_add_points_to_team__win
-    team = Team.new("Rangers", ["Tam", "Lewis", "Mike"], "Paul", 3)
+    team = Team.new("Rangers", ["Tam", "Lewis", "Mike"], "Paul", 0)
     team.update_points("win")
-    assert_equal(4, team.points)
+    assert_equal(1, team.points)
  end
 
  def test_add_points_to_team__lose
-    team = Team.new("Rangers", ["Tam", "Lewis", "Mike"], "Paul", 3)
+    team = Team.new("Rangers", ["Tam", "Lewis", "Mike"], "Paul", 0)
     team.update_points("lose")
-    assert_equal(2, team.points)
+    assert_equal(-1, team.points)
  end    
 
 end
